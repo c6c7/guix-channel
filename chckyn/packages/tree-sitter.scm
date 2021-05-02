@@ -7,13 +7,13 @@
 (define-public tree-sitter
   (package
     (name "tree-sitter")
-    (version "v0.19.4")
+    (version "0.19.4")
     (source (origin
               (method git-fetch)
               (uri (git-reference
                      (url "https://github.com/tree-sitter/tree-sitter")
-                     (commit version)))
-              (file-name (git-file-name name version))
+                     (commit (string-append "v" version))))
+              (file-name (git-file-name name (string-append "v" version)))
               (sha256
                 (base32 "1375ksjz2iysk9rh365z60n3f8ziqk41r8jdxjwsv9dsnd71nd3n"))))
     (build-system gnu-build-system)

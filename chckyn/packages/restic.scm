@@ -9,7 +9,7 @@
 (define-public restic
   (package
     (name "restic")
-    (version "0.12.0")
+    (version "0.12.1")
     ;; TODO Try packaging the bundled / vendored dependencies in the 'vendor/'
     ;; directory.
     (source (origin
@@ -20,7 +20,7 @@
               (file-name (git-file-name name version))
               (sha256
                (base32
-                "12xciygmq2zyfw230bl9ndcygrnsbxzcvn8sqf92kg74984yv37s"))))
+                "0q63z5l2lxjmvaaqviilxl4xaxada28nw8jjagjrfyq1vk2i693f"))))
     (build-system go-build-system)
     (native-inputs
      `(("python" ,python)
